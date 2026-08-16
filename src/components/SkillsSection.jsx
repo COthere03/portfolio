@@ -39,6 +39,7 @@ import bashIcon from "@/assets/icons/bash.png";
 import powerShellIcon from "@/assets/icons/powershell.png";  
 import vercelIcon from "@/assets/icons/vercel.png";
 import figmaIcon from "@/assets/icons/figma.png";
+import postmanIcon from "@/assets/icons/postman.png";
 
 const skills = [
   // Frontend
@@ -75,6 +76,7 @@ const skills = [
   { name: "Android Studio", level: 90, category: "tools", icon: "androidstudio" },
   { name: "Vercel", level: 80, category: "tools", icon: "vercel" },
   { name: "Figma", level: 90, category: "tools", icon: "figma" },
+  { name: "Postman", level: 90, category: "tools", icon: "postman" },
 ];
 
 const categories = [
@@ -123,6 +125,7 @@ const iconImages = {
   powershell: powerShellIcon,
   vercel: vercelIcon,
   figma: figmaIcon,
+  postman: postmanIcon,
 };
 
 const SkillBar = ({ level }) => (
