@@ -74,7 +74,7 @@ const skills = [
   { name: "Clickup", level: 95, category: "tools", icon: "clickup" },
   { name: "Unity", level: 90, category: "tools", icon: "unity" },
   { name: "Android Studio", level: 90, category: "tools", icon: "androidstudio" },
-  { name: "Vercel", level: 80, category: "tools", icon: "vercel" },
+  { name: "Vercel", level: 95, category: "tools", icon: "vercel" },
   { name: "Figma", level: 90, category: "tools", icon: "figma" },
   { name: "Postman", level: 90, category: "tools", icon: "postman" },
 ];
