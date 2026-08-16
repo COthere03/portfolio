@@ -68,7 +68,7 @@ const skills = [
   // Tools
   { name: "Git", level: 90, category: "tools", icon: "git" },
   { name: "GitHub", level: 90, category: "tools", icon: "github" },
-  { name: "Docker", level: 70, category: "tools", icon: "docker" },
+  { name: "Docker", level: 80, category: "tools", icon: "docker" },
   { name: "VS Code", level: 95, category: "tools", icon: "vscode" },
   { name: "Jira", level: 95, category: "tools", icon: "jira" },
   { name: "Clickup", level: 95, category: "tools", icon: "clickup" },
