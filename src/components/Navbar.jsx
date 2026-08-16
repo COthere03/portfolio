@@ -21,21 +21,23 @@ const navItems = [
 ];
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    if (stored === "dark") {
-      document.documentElement.classList.add("dark");
-      setTheme("dark");
-    }
+    // const stored = localStorage.getItem("theme");
+    // if (stored === "dark") {
+    //   document.documentElement.classList.add("dark");
+    //   setTheme("dark");
+    // }
+    document.documentElement.classList.add("dark");
+    setTheme("dark");
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-    localStorage.setItem("theme", newTheme);
-    setTheme(newTheme);
+    // const newTheme = theme === "dark" ? "light" : "dark";
+    // document.documentElement.classList.toggle("dark", newTheme === "dark");
+    // localStorage.setItem("theme", newTheme);
+    // setTheme(newTheme);
   };
 
   return (
@@ -45,7 +47,8 @@ const ThemeToggle = () => {
       title="Toggle theme"
       aria-label="Toggle theme"
     >
-      {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+      {/* {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />} */}
+      <Sun className="w-5 h-5" />
     </button>
   );
 };
@@ -107,7 +110,7 @@ export const Navbar = () => {
         transition={{ duration: 0.3 }}
       >
         <div className="flex min-w-max items-center justify-center rounded-full border border-gray-200 bg-white/80 p-2 shadow-lg backdrop-blur-md dark:border-gray-700 dark:bg-black/80">
-          <div className="flex min-w-max items-center space-x-1">
+          <div className="flex min-w-max items-center justify-center space-x-1 pl-1 md:pl-2">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -124,9 +127,6 @@ export const Navbar = () => {
                 <span className="text-xs mt-1 hidden md:block">{item.name}</span>
               </a>
             ))}
-            <div className="flex items-center px-2">
-              <ThemeToggle />
-            </div>
           </div>
         </div>
       </motion.div>
