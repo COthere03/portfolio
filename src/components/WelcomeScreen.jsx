@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { BriefcaseBusiness, Code2, LaptopMinimalCheck } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const WelcomeScreen = ({ onWelcomeComplete }) => {
@@ -30,10 +30,11 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
   const currentColors = colors[theme] || colors.dark;
   const portfolioUrl = "Loading please wait...";
   const welcomeMessages = [
-    "Crafting digital experiences",
     "Software Engineer",
-    "Full-stack development"
+    "Full-stack development",
+    "Project Management"
   ];
+  const welcomeIcons = [Code2, LaptopMinimalCheck, BriefcaseBusiness];
 
   useEffect(() => {
     const phase1 = setTimeout(() => setPhase(1), 800);
@@ -182,7 +183,10 @@ const WelcomeScreen = ({ onWelcomeComplete }) => {
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                 >
-                  <Sparkles className="h-3 w-3 md:h-4 md:w-4" />
+                  {(() => {
+                    const WelcomeIcon = welcomeIcons[phase % welcomeIcons.length];
+                    return <WelcomeIcon className="h-3 w-3 md:h-4 md:w-4" />;
+                  })()}
                   {welcomeMessages[phase % welcomeMessages.length]}
                 </motion.div>
               </motion.div>

@@ -40,6 +40,7 @@ import powerShellIcon from "@/assets/icons/powershell.png";
 import vercelIcon from "@/assets/icons/vercel.png";
 import figmaIcon from "@/assets/icons/figma.png";
 import postmanIcon from "@/assets/icons/postman.png";
+import visualbasicIcon from "@/assets/icons/vb.png";
 
 const skills = [
   // Frontend
@@ -49,6 +50,7 @@ const skills = [
   { name: "JavaScript", level: 90, category: "frontend", icon: "javascript" },
   { name: "React", level: 90, category: "frontend", icon: "react" },
   { name: "Flutter", level: 90, category: "frontend", icon: "flutter" },
+  { name: "Visual Basic", level: 95, category: "frontend", icon: "vb" },
 
   // Backend
   { name: "PostgreSQL", level: 95, category: "backend", icon: "postgresql" },
@@ -126,6 +128,7 @@ const iconImages = {
   vercel: vercelIcon,
   figma: figmaIcon,
   postman: postmanIcon,
+  vb: visualbasicIcon,
 };
 
 const SkillBar = ({ level }) => (
