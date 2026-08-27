@@ -41,6 +41,8 @@ import vercelIcon from "@/assets/icons/vercel.png";
 import figmaIcon from "@/assets/icons/figma.png";
 import postmanIcon from "@/assets/icons/postman.png";
 import visualbasicIcon from "@/assets/icons/vb.png";
+import restIcon from "@/assets/icons/rest.png";
+import flaskIcon from "@/assets/icons/flask.png";
 
 const skills = [
   // Frontend
@@ -51,6 +53,7 @@ const skills = [
   { name: "React", level: 90, category: "frontend", icon: "react" },
   { name: "Flutter", level: 90, category: "frontend", icon: "flutter" },
   { name: "Visual Basic", level: 95, category: "frontend", icon: "vb" },
+  
 
   // Backend
   { name: "PostgreSQL", level: 95, category: "backend", icon: "postgresql" },
@@ -58,6 +61,8 @@ const skills = [
   { name: "MySQL", level: 95, category: "backend", icon: "mysql" },
   { name: "Supabase", level: 80, category: "backend", icon: "supabase" },
   { name: "Laravel", level: 90, category: "backend", icon: "laravel" },
+  { name: "REST API", level: 95, category: "backend", icon: "rest" },
+  { name: "Flask API", level: 90, category: "backend", icon: "flask" },
 
   // Languages
   { name: "Java", level: 95, category: "languages", icon: "java" },
@@ -129,6 +134,8 @@ const iconImages = {
   figma: figmaIcon,
   postman: postmanIcon,
   vb: visualbasicIcon,
+  rest: restIcon,
+  flask: flaskIcon,
 };
 
 const SkillBar = ({ level }) => (
