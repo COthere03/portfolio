@@ -138,21 +138,6 @@ const iconImages = {
   flask: flaskIcon,
 };
 
-const SkillBar = ({ level }) => (
-  <div className="w-full h-3 bg-secondary/20 rounded-full overflow-hidden">
-    <motion.div
-      initial={{ width: 0 }}
-      animate={{ width: `${level}%` }}
-      transition={{ duration: 1.5, delay: 0.2 }}
-      className={`h-full rounded-full ${
-        level > 75 ? 'bg-gradient-to-r from-green-400 to-emerald-500' : 
-        level > 50 ? 'bg-gradient-to-r from-yellow-400 to-amber-500' : 
-        'bg-gradient-to-r from-red-400 to-pink-500'
-      }`}
-    />
-  </div>
-);
-
 const InfiniteScrollSkills = ({ skills }) => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
   
@@ -248,29 +233,14 @@ export const SkillsSection = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   className="bg-card p-6 rounded-2xl border border-border/30 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg group"
                 >
-                  <div className="flex items-start gap-4 mb-5">
+                  <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-card border-2 border-primary/50 flex items-center justify-center">
                       <img src={iconImages[skill.icon]} alt={skill.name} className="w-6 h-6 object-contain" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
-                          {skill.name}
-                        </h3>
-                        <span className={`text-sm font-medium px-2 py-1 rounded-full ${
-                          skill.level > 75 ? 'bg-emerald-500/10 text-emerald-500' : 
-                          skill.level > 50 ? 'bg-amber-500/10 text-amber-500' : 
-                          'bg-pink-500/10 text-pink-500'
-                        }`}>
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <SkillBar level={skill.level} />
-                      <div className="mt-2 flex justify-between text-xs text-muted-foreground">
-                        <span>Basic</span>
-                        <span>Advanced</span>
-                        <span>Expert</span>
-                      </div>
+                      <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+                        {skill.name}
+                      </h3>
                     </div>
                   </div>
                 </motion.div>
